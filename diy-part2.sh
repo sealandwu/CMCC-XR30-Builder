@@ -154,6 +154,8 @@ config_package_add gdisk
 config_package_add sgdisk
 ## Vim-Full
 config_package_add vim-full
+## iperf
+config_package_add iperf
 
 # MentoHust
 git clone https://github.com/sbwml/luci-app-mentohust package/mentohust
