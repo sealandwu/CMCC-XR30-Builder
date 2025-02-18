@@ -216,7 +216,16 @@ config_add KERNEL_CGROUP_BPF
 config_add KERNEL_BPF_EVENTS
 config_add BPF_TOOLCHAIN_HOST
 config_add KERNEL_XDP_SOCKETS
+config_add KERNEL_MODULE_ALLOW_BTF_MISMATCH
+config_package_add kmod-sched-core
+config_package_add kmod-sched-bpf
 config_package_add kmod-xdp-sockets-diag
+
+## daed
+
+git clone https://github.com/QiuSimons/luci-app-daed package/dae
+mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
+config_package_add luci-app-daed
 
 # ## Frp Latest version patch
 
