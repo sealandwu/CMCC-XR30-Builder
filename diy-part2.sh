@@ -216,7 +216,7 @@ config_add KERNEL_CGROUP_BPF
 config_add KERNEL_BPF_EVENTS
 config_add BPF_TOOLCHAIN_HOST
 config_add KERNEL_XDP_SOCKETS
-config_add PACKAGE_kmod-xdp-sockets-diag
+config_package_add kmod-xdp-sockets-diag
 
 # ## Frp Latest version patch
 
