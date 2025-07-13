@@ -205,28 +205,6 @@ config_package_add luci-lib-ipkg
 config_package_add byobu
 config_package_add tmux
 
-## Try to enable ebpf
-
-config_add DEVEL
-config_add KERNEL_DEBUG_INFO
-config_del KERNEL_DEBUG_INFO_REDUCED
-config_add KERNEL_DEBUG_INFO_BTF
-config_add KERNEL_CGROUPS
-config_add KERNEL_CGROUP_BPF
-config_add KERNEL_BPF_EVENTS
-config_add BPF_TOOLCHAIN_HOST
-config_add KERNEL_XDP_SOCKETS
-config_add KERNEL_MODULE_ALLOW_BTF_MISMATCH
-config_package_add kmod-sched-core
-config_package_add kmod-sched-bpf
-config_package_add kmod-xdp-sockets-diag
-
-## daed
-
-git clone https://github.com/QiuSimons/luci-app-daed package/dae
-mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
-config_package_add luci-app-daed
-
 # ## Frp Latest version patch
 
 # FRP_MAKEFILE_PATH="feeds/packages/net/frp/Makefile"
