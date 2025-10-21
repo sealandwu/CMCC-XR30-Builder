@@ -121,7 +121,8 @@ jobs:
                 sed -i 's/CONFIG_PACKAGE_lua-cjson=y/CONFIG_WIFI_NORMAL_SETTING=y/g' .config
 
             - name: SSH connection to Actions
-              uses: P3TERX/ssh2actions@v1.0.0
+              uses: mxschmitt/action-tmate@v3
+              # uses: P3TERX/ssh2actions@v1.0.0
               if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
               env:
                 TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
