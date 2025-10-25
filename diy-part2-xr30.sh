@@ -126,6 +126,7 @@ config_package_add luci-app-argon-config
 config_package_add luci-app-ddns
 config_package_add ddns-scripts-cloudflare
 config_package_add luci-app-ocserv
+config_package_add luci-ssl-openssl
 
 
 
